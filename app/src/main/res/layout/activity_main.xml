@@ -5,33 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="100dp">
+    android:padding="5dp">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:id="@+id/editTxtName"
-        android:hint="@string/app_name"
-        android:lines="2"
-        android:inputType="textAutoComplete"/>
-    <Button
-        android:id="@+id/button"
+    <RelativeLayout
+        android:id="@+id/moviesRelativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onBtnClick"
-        android:text="Register"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/editTxtName"
-        android:layout_marginTop="10dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtHello"
-        android:text="@string/app_name"
-        android:layout_below="@+id/button"
-        android:textSize="20dp"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true">
+
+        <CheckBox
+            android:id="@+id/checkBoxHarry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Harry Potter" />
+
+        <CheckBox
+            android:id="@+id/checkBoxMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/checkBoxHarry"
+            android:checked="true"
+            android:text="The Matrix" />
+
+        <CheckBox
+            android:id="@+id/checkBoxHobbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/checkBoxMatrix"
+            android:checked="false"
+            android:text="The Hobbit" />
+
+
+    </RelativeLayout>
 
 </RelativeLayout>

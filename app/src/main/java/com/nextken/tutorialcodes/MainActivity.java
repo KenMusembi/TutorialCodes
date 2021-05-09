@@ -1,40 +1,38 @@
 package com.nextken.tutorialcodes;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity {
+    private CheckBox checkBoxHarry, checkBoxMatrix, checkBoxHobbit;
 
-    private TextView txtHello;
-    private EditText editTxtName;
-    private Button button;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button)findViewById(R.id.button);
-        button.setOnClickListener(this);
-        txtHello = (TextView)findViewById(R.id.txtHello);
-        editTxtName = (EditText)findViewById(R.id.editTxtName);
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.button:
-                Toast.makeText(MainActivity.this, "Hello Button Pressed", Toast.LENGTH_LONG).show();
-                txtHello.setText(" Hello " + editTxtName.getText().toString());
-                break;
-            default:
-                break;
-        }
+        checkBoxHarry = findViewById(R.id.checkBoxHarry);
+        checkBoxMatrix = findViewById(R.id.checkBoxMatrix);
+        checkBoxHobbit = findViewById(R.id.checkBoxHobbit);
+        
+        checkBoxHarry.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    Toast.makeText(MainActivity.this, "You have watched harry potter", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "You need to watch harry potter", Toast.LENGTH_LONG).show();}
+            }
+        });
     }
 }
