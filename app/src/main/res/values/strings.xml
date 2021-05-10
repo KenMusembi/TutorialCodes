@@ -3,4 +3,7 @@
     <string name="hello">Hello</string>
     <string name="settings">Settings</string>
     <string name="alarm">Alarm</string>
+    <string name="modern_family">Modern Family</string>
+    <string name="how_i_met">How I Met Your Mother</string>
+    <string name="watch">Watch</string>
 </resources>
