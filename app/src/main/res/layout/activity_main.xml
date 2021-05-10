@@ -7,40 +7,11 @@
     tools:context=".MainActivity"
     android:padding="5dp">
 
-    <RelativeLayout
-        android:id="@+id/moviesRelativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_centerInParent="true">
-
-        <CheckBox
-            android:id="@+id/checkBoxHarry"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Harry Potter" />
-
-        <CheckBox
-            android:id="@+id/checkBoxMatrix"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_toRightOf="@+id/checkBoxHarry"
-            android:checked="true"
-            android:text="The Matrix" />
-
-        <CheckBox
-            android:id="@+id/checkBoxHobbit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_toRightOf="@+id/checkBoxMatrix"
-            android:checked="false"
-            android:text="The Hobbit" />
-
-
-    </RelativeLayout>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_alarm_foreground"
+        android:id="@+id/myImage"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
